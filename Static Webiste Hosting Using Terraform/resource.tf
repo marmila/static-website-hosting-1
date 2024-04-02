@@ -1,7 +1,8 @@
 resource "aws_s3_bucket" "bucket1" {
-    bucket = "web-bucket-mathesh"
+    bucket = "web-bucket-marcomila665"
   
 }
+
 resource "aws_s3_bucket_public_access_block" "bucket1" {
   bucket = aws_s3_bucket.bucket1.id
 
@@ -12,14 +13,14 @@ resource "aws_s3_bucket_public_access_block" "bucket1" {
 }
 
 resource "aws_s3_object" "index" {
-  bucket = "web-bucket-mathesh"
+  bucket = "web-bucket-marcomila665"
   key    = "index.html"
   source = "index.html"
   content_type = "text/html"
 }
 
 resource "aws_s3_object" "error" {
-  bucket = "web-bucket-mathesh"
+  bucket = "web-bucket-marcomila665"
   key    = "error.html"
   source = "error.html"
   content_type = "text/html"
